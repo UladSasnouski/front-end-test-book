@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="table">
+        <div class="content-nav">
+            <div class='grid-container-nav'>
+                <div class="name-nav">
+                    Name
+                </div>
+                <div class="phone-nav">
+                    Phone Number
+                </div>
+                <div class="options-nav">
+                    Options
+                </div>
+            </div>
+        </div>
+        <div class="output" id="output">
+
+        </div>
+        <div class="content-nav">
+            <div class='grid-container-nav'>
+                <div class="name-nav">
+                    <input type="text" id="inputName" name="user" placeholder="Enter name" maxlength="16">
+                </div>
+                <div class="phone-nav">
+                    <input type="text" id="inputPhone" name="phone" placeholder="Enter Phone +___(__)__-__-___"
+                        maxlength="24">
+                </div>
+                <div class="options-nav">
+                    <button class="button" id="submit">Add contact</button>
+                </div>
+            </div>
+        </div>
+        <div id="error-message" class="error-message">
+            <h6 id="textError"></h6>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

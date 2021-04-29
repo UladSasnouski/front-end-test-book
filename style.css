@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    width: 300px;
+}
+.content p {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+}
+.input label {
+    margin-left: 30px;
+}
+
+.table {
+    max-width: 480px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.output,
+.content-nav {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 30px;
+    grid-template-columns: 2fr 4fr 1fr 1fr;
+}
+
+.name,
+.phone,
+.btn-edit,
+.btn-del {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+.phone,
+.btn-del {
+    border-right: 1px solid black;
+}
+
+.grid-container-nav {
+    display: grid;
+    grid-template-rows: 30px;
+    grid-template-columns: 2fr 4fr 2fr;
+}
+
+.name-nav,
+.phone-nav,
+.options-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.name-nav input,
+.phone-nav input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.options-nav button {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-edit button,
+.btn-del button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+.btn-edit button:hover,
+.btn-del button:hover,
+.button:hover {
+    background-color: darkgrey;
+}
+
+.destroy {
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation: destroy 1s cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes destroy {
+    to {
+        transform: scale(3, 3);
+        opacity: 0;
+    }
+}
+
+.edit {
+    color: rgb(255, 0, 0);
+}
+
+.error-message {
+    max-width: 350px;
+    margin: 0;
+    border-radius: 2px;
+    background-color: rgba(174, 181, 185, 0.25);
+    transform: translateX(-1000%);
+    margin-left: 90px;
+    transition: all 0.2s linear;
+}
+
+.error-message h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff0000;
+    margin: 0;
+}
+
+.open-error {
+    transform: translateX(0);
+}
